@@ -13,6 +13,12 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "turbo lint",
+    "local:postgres:logs": "node ./scripts/manage-local-postgres.mjs logs",
+    "local:postgres:remove": "node ./scripts/manage-local-postgres.mjs remove",
+    "local:postgres:setup": "node ./scripts/local-postgres-setup.mjs",
+    "local:postgres:start": "node ./scripts/manage-local-postgres.mjs start",
+    "local:postgres:status": "node ./scripts/manage-local-postgres.mjs status",
+    "local:postgres:stop": "node ./scripts/manage-local-postgres.mjs stop",
     "test": "turbo test",
     "test:e2e": "turbo test:e2e",
     "test:integration": "turbo test:integration",
@@ -33,4 +39,3 @@
     "zod": "^3.24.3"
   }
 }
-

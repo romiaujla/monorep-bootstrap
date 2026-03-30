@@ -38,6 +38,34 @@ pnpm lint
 pnpm typecheck
 ```
 
+## Local PostgreSQL
+
+Run the guided local database setup:
+
+```bash
+pnpm local:postgres:setup
+```
+
+The script will:
+
+- ask whether to use Docker or Podman
+- ask for the local PostgreSQL port
+- ask for the database name
+- suggest a strong password and let you accept or replace it
+- ask for the schema name, defaulting to `public`
+- create the local PostgreSQL container
+- generate `.env.local` with the connection settings
+
+After setup, you can manage the container with:
+
+```bash
+pnpm local:postgres:start
+pnpm local:postgres:stop
+pnpm local:postgres:status
+pnpm local:postgres:logs
+pnpm local:postgres:remove
+```
+
 To run the apps locally:
 
 ```bash
