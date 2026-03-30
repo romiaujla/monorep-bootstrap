@@ -1,0 +1,35 @@
+{
+  "name": "@repo/types",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "lint": "eslint src --config eslint.config.mjs",
+    "test": "pnpm test:unit",
+    "test:e2e": "echo \"No e2e tests configured for @repo/types\"",
+    "test:integration": "echo \"No integration tests configured for @repo/types\"",
+    "test:unit": "echo \"No unit tests configured for @repo/types\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*"
+  }
+}
+
